@@ -3,7 +3,7 @@
 @keyframes fadein {
 	0% {
 		opacity: 0;
-		transform: scale(0.6);
+		transform: scale(0.7);
 	}
 
 	100% {
@@ -15,7 +15,7 @@
 @keyframes fadeinright {
 	0% {
 		opacity: 0;
-		transform: translateX(50px);
+		transform: translateX(20px);
 	}
 
 	100% {
