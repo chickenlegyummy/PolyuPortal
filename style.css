@@ -1,0 +1,106 @@
+@import url('https://fonts.googleapis.com/css2?family=Merriweather&family=Noto+Sans+TC:wght@100&display=swap');
+
+@keyframes fadein {
+	0% {
+		opacity: 0;
+		transform: scale(0.6);
+	}
+
+	100% {
+		opacity: 1;
+		transform: scale(1);
+	}
+}
+
+@keyframes fadeinright {
+	0% {
+		opacity: 0;
+		transform: translateX(50px);
+	}
+
+	100% {
+		opacity: 1;
+		transform: translateX(0);
+	}
+}
+
+* {
+    margin: 0;
+    font-family: 'Merriweather', serif;
+    font-family: 'Noto Sans TC', sans-serif;
+}
+body{
+    display: flex;
+    background-color: rgb(46, 42, 49);
+    color: rgba(255, 255, 255, 0.699);
+}
+
+.title, .content{
+    padding: 20px;
+}
+
+.title{
+    flex: 1;
+    text-align: center;
+    animation: fadein 1.5s ease-out 0s 1 normal forwards;
+}
+
+.title img{
+    margin-top: 200px;
+    width: 150px;
+    padding: 20px;
+}
+
+.subtitle{
+    margin: 10px;
+}
+
+.description{
+    padding-top: 7px;
+    color: rgb(133, 133, 133);
+}
+
+.content{
+    flex: 2;
+}
+
+.content ul{
+    list-style: none;
+}
+
+.content li{
+    padding: 25px;
+    border-bottom-style: solid;
+    border-width: 1px;
+    border-color: rgb(80, 80, 80);
+    background: linear-gradient(to right, rgb(68, 68, 68) 50%, rgba(255, 255, 255, 0) 50%);
+    background-size: 200% 100%;
+    background-position: right;
+    transition: all 0.5s ease-out;
+    animation: fadeinright 1.5s ease-out 0s 1 normal forwards;
+}
+
+.content a{
+    color: rgba(255, 255, 255, 0.699);
+    text-decoration: none;
+}
+
+.content a:hover{
+    color: red;
+}
+
+.content li:hover{
+    background-position: left;
+}
+
+@media (max-width:600px){
+    body{
+        flex-direction: column;
+    }
+    .title img{
+        margin-top: 0px;
+    }
+    .content{
+        margin-right: 50px;
+    }
+}
