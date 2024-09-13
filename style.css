@@ -30,7 +30,6 @@
     font-family: 'Noto Sans TC', sans-serif;
 }
 body{
-    display: flex;
     background-color: rgb(46, 42, 49);
     color: rgba(255, 255, 255, 0.699);
 }
@@ -40,7 +39,11 @@ body{
 }
 
 .title{
-    flex: 1;
+    height: 100%;
+    top: 0;
+    left: 0;
+    width: 40%;
+    position: fixed;
     text-align: center;
     animation: fadein 1.5s ease-out 0s 1 normal forwards;
 }
@@ -61,7 +64,8 @@ body{
 }
 
 .content{
-    flex: 2;
+    float: right;
+    width: 60%;
 }
 
 .content ul{
@@ -95,12 +99,24 @@ body{
 
 @media (max-width:600px){
     body{
+        display: flex;
         flex-direction: column;
     }
+
+    .title{
+        position: relative;
+        width: auto;
+        height: auto;
+        top: auto;
+        left: auto;
+        flex: 2;
+    }
+
     .title img{
         margin-top: 0px;
     }
     .content{
+        flex: 1;
         margin-right: 50px;
     }
 }
