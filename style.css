@@ -116,6 +116,7 @@ body{
         margin-top: 0px;
     }
     .content{
+        width: auto;
         flex: 1;
         margin-right: 50px;
     }
